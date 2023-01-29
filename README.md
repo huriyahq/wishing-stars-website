@@ -1,8 +1,8 @@
-# Wishing Stars Website
-Responsive website with shopping cart.
+# Wishing Stars – e-commerce website
+**IN PROGRESS**
 
 ## Overview
-A website that lets users buy wishing stars.
+A responsive website that lets users buy wishing stars.
 
 ### Screenshot
 * 375px: [Mobile]()
