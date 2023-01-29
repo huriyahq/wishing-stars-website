@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600&display=swap');
+
 /* GLOBAL */
 :root {
     --clr-white: #fff;
@@ -12,6 +14,8 @@
     --clr-accent-green: #87B800;
     --clr-accent-yellow: #FABC2A;
 
+    --font-headings: "Poppins", sans-serif;
+    --font-main: "lora", serif;
 }
 
 * {
@@ -21,9 +25,13 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: var(--font-main);
     min-height: 100vh;
     font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
 }
 
 .container {
@@ -33,28 +41,55 @@ body {
 }
 
 /* NAVBAR */
-.navbar {
+.nav {
     background-color: var(--clr-black);
     color: var(--clr-white);
-    padding: 25px 60px;
+    padding: 20px 50px;
     margin-bottom: 30px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
-.basket {
-    background-color: var(--clr-white);
-    border: 2px solid var(--clr-accent-pink);
+.nav__logo {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.nav__menu {
+    background-color: var(--clr-black);
+    padding: 2rem;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav__menu_show {
+    display: flex;
+}
+
+.nav__menu a {
+    color: var(--clr-white);
+    font-family: var(--font-headings);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav__basket {
     border-radius: 25%;
-    padding: 5px;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     position: relative;
 }
-.basket-icon {
+
+.icon {
     height: 100%;
     width: auto;
     cursor: pointer;
@@ -72,6 +107,7 @@ body {
 }
 
 /* MAIN - SHOP */
+.main,
 .shop {
     padding: 2% 4%;
     gap: 4%;
@@ -101,7 +137,6 @@ body {
 .shop-item:hover {
     box-shadow: 0px 4px 8px 0px rgba(39,39,39,0.2);
 }
-
 
 .details {
     display: flex;
@@ -163,7 +198,6 @@ body {
     opacity: 1;
 }
 
-
 .qty-btn:hover {
     opacity: 0.8;
     box-shadow: 0px 0px 2px 0px rgba(39,39,39,0.3);
@@ -193,16 +227,33 @@ body {
 }
 
 @media (min-width: 769px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav__logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nav__menu {
+        display: flex;
+        flex-direction: row;
+    }
+
     .shop {
         grid-template-columns: repeat(3, 223px);
     }
-
 }
 
-
 @media (min-width: 1025px) {
+    .nav__logo {
+        width: 90px;
+        height: 90px;
+    }
+
     .shop {
         grid-template-columns: repeat(4, 223px);
     }
-
 }
