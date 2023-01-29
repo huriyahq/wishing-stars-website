@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 262.25 253.62">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: BDSupperBold, 'BD Supper';
+        font-size: 46px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Star">
+    <g>
+      <text class="cls-1" transform="translate(11.49 146.2) rotate(67.23)"><tspan x="0" y="0">W</tspan></text>
+      <text class="cls-1" transform="translate(35 193.35) rotate(49.48)"><tspan x="0" y="0">I</tspan></text>
+      <text class="cls-1" transform="translate(47.13 207.75) rotate(37.88)"><tspan x="0" y="0">S</tspan></text>
+      <text class="cls-1" transform="translate(72.42 226.92) rotate(21.1)"><tspan x="0" y="0">H</tspan></text>
+      <text class="cls-1" transform="translate(107.45 238.7) rotate(7.44)"><tspan x="0" y="0">I</tspan></text>
+      <text class="cls-1" transform="translate(126.95 241.79) rotate(-6.43)"><tspan x="0" y="0">N</tspan></text>
+      <text class="cls-1" transform="translate(167.76 236.08) rotate(-26.83)"><tspan x="0" y="0">G</tspan></text>
+      <text class="cls-1" transform="translate(203.46 215.72) rotate(-41.01)"><tspan x="0" y="0"> </tspan></text>
+      <text class="cls-1" transform="translate(216.34 204.83) rotate(-52.09)"><tspan x="0" y="0">S</tspan></text>
+      <text class="cls-1" transform="translate(234.57 180.16) rotate(-66.25)"><tspan x="0" y="0">T</tspan></text>
+      <text class="cls-1" transform="translate(245.18 157.03) rotate(-81.02)"><tspan x="0" y="0">A</tspan></text>
+      <text class="cls-1" transform="translate(250.2 116.97) rotate(-99.61)"><tspan x="0" y="0">R</tspan></text>
+      <text class="cls-1" transform="translate(242.79 80.73) rotate(-116.19)"><tspan x="0" y="0">S</tspan></text>
+      <path class="cls-2" d="m26.39,109.52c.27-4.19,4.99-13.97,7.27-18.81,2.87-6.08,11.22-13.98,6.41-18.01l-22.94,18.31c-2.74-3.4,15.63-28.04,19.69-32.69,9.2-10.52,20.64-21.96,33.07-29.72,22.32-13.94,57.3-21.25,72.29-10.13-11.3,3.2-17.18,2.02-31.26,9.08-11.43,5.73-21.04,15.05-29.06,24.33-15.25,17.66-30.66,49.95-36.06,54.28.65-1.94,12.5-33.4,2.41-26.05-5.46,3.98-13.28,21.95-21.81,29.4h0ZM184.38,29.12c2.33-4.61,8.15-22.05,3.45-25.58l-20.98,8.34C162.01,8.83,155.32-.42,150.48.02c-4.02,3.07-.53,8.33,1.02,12.72,1.76,4.97,2.24,9.41,3.62,13.6-4.21,1.31-18.9,2.08-20.23,7.12-1.21,6.44,12.86,8.13,17.65,10.31,5.87,2.67,7.45,19.63,13.1,20.22,4.63.9,6.78-9.72,7.76-12.68,2.06-6.23,6.66-3.36,12.74-2.79,22.6,2.15,8.09-8.41-1.77-19.4h0ZM11.35,95.13c5.4,2.78,10.69-1.87,16.55-5.24-.97,6-12.35,22.27-5.43,26.32,8.11,2.32,15.77-13.36,19.99-18.28-7.6,20.91-1.39,26.84,13.41,3.65,21.34-33.43,33.46-66.08,79.28-77.03,4.13-.99,21.24,1.58,12.57-8.46-7.19-8.33-29.21-8.68-38.49-7.54C48.77,15.95,5.92,86.67,11.35,95.13Z"/>
+    </g>
+  </g>
+</svg>
