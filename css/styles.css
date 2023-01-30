@@ -117,7 +117,7 @@ h1 {
 }
 
 .inner-container > h1 {
-    margin-bottom: 4%;
+    margin-bottom: 2%;
 }
 
 /* NAVBAR */
@@ -370,13 +370,23 @@ h1 {
 
 .basket__options {
     text-align: center;
-    padding-bottom: 4px;
+    padding-bottom: 20px;
     margin-bottom: 4%;
     border-bottom: 4px dotted var(--clr-accent-blue);
 }
 
 .basket__options a {
     text-decoration: none;
+}
+
+.basket__options h2 {
+    margin: 1.4% 0;
+}
+
+.basket__options button {
+    margin: 4px;
+    width: 100%;
+    max-width: 160px;
 }
 
 .close-btn {
@@ -396,6 +406,7 @@ h1 {
 }
 
 .basket__summary {
+    display: none;
     border-radius: 10px;
     padding: 20px;
     margin: 4% 0;
@@ -414,6 +425,11 @@ h1 {
 .basket__summary button {
     width: 100%;
     margin: 1rem 0;
+}
+
+.basket__summary_show {
+    background-color: var(--clr-light-grey);
+    display: block;
 }
 
 /* FOOTER */
@@ -491,6 +507,8 @@ h1 {
 
     .basket__options {
         border: none;
+        padding-bottom: none;
+        margin-bottom: 2%;
     }
 }
 

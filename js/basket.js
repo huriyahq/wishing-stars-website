@@ -15,20 +15,21 @@ let generateBasketItems = () => {
             // Match id from basket (x) to id in shopItemsData database (y)
             // If search function finds something, it will return it. If it doesn't find something, it will return an empty array
             let search = shopItemsData.find((y) => y.id === id) || [];
+            let { img, name, price } = search;
             return `
             <article class="basket-item">
-                <img src=${search.img} alt="" class="basket-item__img" />
+                <img src=${img} alt="" class="basket-item__img" />
                 <section class="basket-item__details">
 
                     <div>
-                        <h3>${search.name}<br />
-                        <span>£ ${search.price}</span>
+                        <h3>${name}<br />
+                        <span>£ ${price}</span>
                         </h3>
                         <button class="close-btn" onclick="removeItem(${id})">&#x2717;</button>
                     </div>
 
                     <div>
-                        <h4 class="basket-item__price">£ ${item * search.price}</h4>
+                        <h4 class="basket-item__price">£ ${item * price}</h4>
                         <div>
                             <button class="qty-btn" onclick="decrement(${id})">&minus;</button>
 
@@ -53,7 +54,7 @@ let generateBasketItems = () => {
             <button class="btn primary-btn">Shop</button>
         </a>
         
-        <a href="index.html">
+        <a href="../index.html">
         <button class="btn secondary-btn">Home</button>
         </a>`;
     }
@@ -74,11 +75,11 @@ let increment = (id) => {
         search.item += 1;
     }
 
+    update(selectedItem.id);
     // Call generateBasketItems() to re-render cards with updated data
     generateBasketItems();
-    update(selectedItem.id);
+    // update(selectedItem.id);
     localStorage.setItem("data", JSON.stringify(basket));
-
 };
 
 let decrement = (id) => {
@@ -101,6 +102,7 @@ let decrement = (id) => {
 let update = (id) => {
     let search = basket.find((x) => x.id === id);
     document.getElementById(id).innerHTML = search.item;
+    basketTotal();
     calculation();
 };
 
@@ -114,9 +116,22 @@ let removeItem = (id) => {
     // Call generateBasketItems() to re-render components and update items shown in basket without having to refresh
     generateBasketItems();
     // Now remove item from local storage too
+    basketTotal();
+    calculation();
     localStorage.setItem("data", JSON.stringify(basket));
+
 };
 
+// Clear everything in basket
+let clearAll = () => {
+    basketSummary.innerHTML = "";
+    basketSummary.classList.remove("basket__summary_show");
+    basket = []
+    generateBasketItems();
+    basketTotal();
+    calculation();
+    localStorage.setItem("data", JSON.stringify(basket));
+};
 
 // Calculate basket total
 let basketTotal = () => {
@@ -135,8 +150,9 @@ let basketTotal = () => {
             // x is prev number, y is next number. Method will add first two then add next number in array to that total, etc
             // Method starts from 0
         }).reduce((x, y) => x + y, 0);
-        basketOptions.innerHTML = `
-        <h2>Subtotal: £ ${amount}</h2>`
+
+        basketSummary.classList.add("basket__summary_show");
+
         basketSummary.innerHTML = `
             <div>
                 <h2>Subtotal</h2>
@@ -144,6 +160,12 @@ let basketTotal = () => {
             </div>
             <button class="btn primary-btn">Checkout</button>
             <p><em>Shipping is calculated at checkout.</em></p>
+        `
+        
+        basketOptions.innerHTML = `
+        <h2>Subtotal: £ ${amount}</h2>
+        <button class="btn primary-btn">Checkout</button>
+        <button class="btn secondary-btn" onclick="clearAll()">Clear All</button>
         `;
     // If there is no data in the local storage, i.e. there are no items in the basket, do nothing
     } else return;
