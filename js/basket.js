@@ -124,8 +124,8 @@ let removeItem = (id) => {
 
 // Clear everything in basket
 let clearAll = () => {
-    basketSummary.innerHTML = "";
-    basketSummary.classList.remove("basket__summary_show");
+    // basketSummary.innerHTML = "";
+    // basketSummary.classList.remove("basket__summary_show");
     basket = []
     generateBasketItems();
     basketTotal();
@@ -168,7 +168,11 @@ let basketTotal = () => {
         <button class="btn secondary-btn" onclick="clearAll()">Clear All</button>
         `;
     // If there is no data in the local storage, i.e. there are no items in the basket, do nothing
-    } else return;
+    } else {
+        basketSummary.innerHTML = "";
+        basketSummary.classList.remove("basket__summary_show");
+        return;
+    }
 };
 
 basketTotal();
