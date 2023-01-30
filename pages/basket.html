@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
     <!-- External stylesheet -->
     <link rel="stylesheet" href="../css/styles.css">
     <title>Wishing Stars - Basket</title>
@@ -36,14 +38,18 @@
 
         <!-- MAIN -->
         <main>
-            <section class="main">
+            <article class="inner-container">
                 <h1>Basket</h1>
-            </section>
+                <section id="basketOptions" class="basket__options"></section>
+                <section id="basketItems" class="basket__items"></section>
+                <section id="basketSummary" class="basket__summary"></section>
+            </article>
         </main>
         <!-- FOOTER -->
         <footer class="footer">&copy; Wishing Stars | 2023 </footer>
     <!-- External JavaScript -->
-    <!-- <script src="../js/main.js"></script> -->
+    <script src="../js/ShopData.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/basket.js"></script>
 </body>
 </html>
