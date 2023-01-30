@@ -9,7 +9,7 @@ A responsive website that lets users buy wishing stars.
 * 1440px: [Desktop]()
 
 ### Links
-Used the following resources to learn:
+References:
 * [freeCodeCamp](https://www.youtube.com/watch?v=cT_ZYrS3tKc)
 
 ## My Process
