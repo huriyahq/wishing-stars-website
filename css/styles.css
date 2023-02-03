@@ -307,7 +307,8 @@ h1 {
 
 .basket__options,
 .basket__items,
-.basket__summary {
+.basket__summary,
+.contact {
     width: 100%;
     max-width: 300px;
 }
@@ -376,7 +377,7 @@ h1 {
     text-align: center;
     padding-bottom: 20px;
     margin-bottom: 4%;
-    border-bottom: 4px dotted var(--clr-accent-blue);
+    /* border-bottom: 4px dotted var(--clr-accent-blue); */
 }
 
 .basket__options a {
@@ -436,6 +437,53 @@ h1 {
     display: block;
 }
 
+/* CONTACT PAGE STYLES */
+.contact p {
+    text-align: center;
+}
+
+#contactForm {
+    padding: 1em;
+}
+
+#contactForm ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#contactForm li + li {
+    margin-top: 0.8em;
+}
+
+#contactForm input,
+#contactForm textarea {
+    font: 1em var(--font-main);
+    border: 2px solid var(--clr-accent-blue);
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 100%;
+}
+
+#contactForm textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: var(--clr-accent-pink);
+}
+
+.contact span,
+#contactForm span {
+    color: var(--clr-accent-dark-pink);
+}
+
+#contactForm button {
+    width: 100%;
+}
+
 /* FOOTER */
 .footer {
     width: 100%;
@@ -451,8 +499,29 @@ h1 {
     .shop,
     .basket__options,
     .basket__items,
-    .basket__summary {
+    .basket__summary,
+    .contact {
         max-width: 400px;
+    }
+
+    #contactForm {
+        margin-top: 4%;
+        border-top: 4px dotted var(--clr-accent-blue);
+    }
+
+    #contactForm label {
+        width: 100px;
+        display: inline-block;
+        text-align: right;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        max-width: 260px;
+    }
+
+    #contactForm .button {
+        padding-left: 100px;
     }
 
     .shop {
@@ -486,7 +555,8 @@ h1 {
     .shop,
     .basket__options,
     .basket__items,
-    .basket__summary {
+    .basket__summary,
+    .contact {
         max-width: 700px;
     }
 
@@ -504,15 +574,25 @@ h1 {
         box-shadow: none;
     }
 
-
     .basket-item__details {
         margin: 0 4px;
     }
 
     .basket__options {
-        border: none;
+        /* border: none; */
         padding-bottom: none;
         margin-bottom: 2%;
+    }
+
+    #contactForm {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-top: 4%;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        max-width: 360px;
     }
 }
 
